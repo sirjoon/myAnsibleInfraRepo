@@ -6,7 +6,7 @@
    tags: provisioning
 
    vars:
-     keypair: Sir
+     
      instance_type: t2.micro
      image: ami-0ee23bfc74a881de5
      wait: yes
@@ -52,7 +52,6 @@
                       image={{ image }}
                       wait=true
                       region={{ region }}
-                      keypair={{ keypair }}
                       count={{count}}
        register: ec2
      - name: Task # 3 Add Tagging to EC2 instance
